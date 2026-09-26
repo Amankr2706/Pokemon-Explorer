@@ -2,7 +2,7 @@
 
 A responsive Pokémon Explorer built with **Next.js** and the **PokéAPI**. Browse all 151 original Kanto Pokémon, search by name, and open any Pokémon to see its image, types, abilities, and base stats.
 
-## Features
+## ✨ Key Features
 
 - Homepage listing all 151 Pokémon with live search-by-name
 - Dynamic detail page per Pokémon showing image, types, abilities, height, weight, and base stats
@@ -10,12 +10,27 @@ A responsive Pokémon Explorer built with **Next.js** and the **PokéAPI**. Brow
 - Server-side data fetching from PokéAPI with caching for fast loads
 - Fully responsive layout (mobile, tablet, desktop)
 
-## Tech Stack
+## 🚀 Tech Stack
 
 - [Next.js](https://nextjs.org/) (App Router)
 - [React](https://react.dev/) + TypeScript
 - [Tailwind CSS](https://tailwindcss.com/)
 - [PokéAPI](https://pokeapi.co/) as the data source
+
+## 📂 Project Structure
+
+```
+├── app/
+│   ├── page.tsx              # Homepage — fetches Pokémon list
+│   ├── layout.tsx            # Root layout, metadata, theme init
+│   ├── icon.svg               # App icon / favicon
+│   └── pokemon/[name]/
+│       └── page.tsx           # Pokémon detail page (dynamic route)
+├── components/
+│   └── pokemon-explorer.tsx   # Main homepage UI (hero, starters, collection grid, search)
+├── public/                    # Static assets
+└── package.json
+```
 
 ## Getting Started
 
@@ -51,21 +66,6 @@ A responsive Pokémon Explorer built with **Next.js** and the **PokéAPI**. Brow
 ```bash
 npm run build
 npm start
-```
-
-## Project Structure
-
-```
-├── app/
-│   ├── page.tsx              # Homepage — fetches Pokémon list
-│   ├── layout.tsx            # Root layout, metadata, theme init
-│   ├── icon.svg               # App icon / favicon
-│   └── pokemon/[name]/
-│       └── page.tsx           # Pokémon detail page (dynamic route)
-├── components/
-│   └── pokemon-explorer.tsx   # Main homepage UI (hero, starters, collection grid, search)
-├── public/                    # Static assets
-└── package.json
 ```
 
 ## Data Source
